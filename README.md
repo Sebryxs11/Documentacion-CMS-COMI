@@ -21,3 +21,6 @@ Dentro de cada if se debe especificar lo que se desea hacer para cada llamada, e
 
 # Archivo .h
 Este archivo almacenará el nombre de las funciones para que el código del competidor y el stub puedan acceder a ellas de ser necesario. Para acceder a dichas funciones es necesario colocar el header ' #include "problema.h" ' donde "problema" es el nombre asignado al archivo.
+
+# Archivos a subir
+Finalmente, para subir el problema se requiere subir un ejecutable sin extensión del manager, típicamente compilado en CMake, subir el stub.cpp y subir el problema.h.
