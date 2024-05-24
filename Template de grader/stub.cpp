@@ -52,10 +52,10 @@ int main(int argc, char **argv) {
 
 
 	}
-    else if (string(argv[3]) == "1") { // segunda llamada, para problemas de comunicacion
+    /*else if (string(argv[3]) == "1") { // segunda llamada, para problemas de comunicacion
 
 
-	}
+	}*/
 	else {
 		fprintf(stderr, "Error del evaluador.\n");
 		fprintf(stderr, "Evaluador desconocido del tipo %s\n", argv[3]);
@@ -64,4 +64,3 @@ int main(int argc, char **argv) {
 	return 0;
 
 }
-
