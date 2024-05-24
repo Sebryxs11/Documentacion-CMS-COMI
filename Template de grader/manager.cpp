@@ -64,17 +64,13 @@ NORETURN void quitf(TResult result, const char* fmt, ...) {
 	quit(result, message);
 }
 
-#ifdef __GNUC__
-__attribute__ ((format (printf, 2, 3)))
-#endif
-
 FILE *grader1in,*grader1out, *grader2in, *grader2out;
 
-#ifdef __GNUC__
+/*#ifdef __GNUC__
 __attribute__ ((format (printf, 3, 4)))
 #endif
 
-/*NORETURN inline void die(TResult result, bool sendDie, const char* fmt, ...) { // die para comunicacion
+NORETURN inline void die(TResult result, bool sendDie, const char* fmt, ...) { // die para comunicacion
 	if (sendDie) {
 	  fprintf(grader2out, "-1\n");
 	  fflush(grader2out);
