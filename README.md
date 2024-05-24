@@ -12,6 +12,8 @@ Para los problemas interactivos el manager solo maneja un par de archivos, lo qu
 
 En el manager debe declarar que se cierra el STDIN al terminar de leer el input al igual que cada llamada al stub al terminar sus procesos, tipicamente con la función fclose(archivo); (fclose(stdin); fclose(grader1in); fclose(grader1out); ...)
 
+Al terminar todos los procesos, el manager imprimirá a través del STOUT el resultado de 0 a 1, dependiendo de cuantos puntos obtuvo la solución.
+
 # Stub
 Este archivo es el que mantendra comunicación con el código del competidor, inicialmente al stub se le comunica por default la cantidad de llamadas que se le harán, en este caso le haremos una o dos llamadas, el caso para cada una está bien definido en el template.
 
