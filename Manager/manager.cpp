@@ -68,7 +68,7 @@ NORETURN void quitf(TResult result, const char* fmt, ...) {
 __attribute__ ((format (printf, 2, 3)))
 #endif
 
-FILE *grader1in,*grader1out, *grader2in, *grader2out;
+FILE *grader1in, *grader1out, *grader2in, *grader2out;
 
 #ifdef __GNUC__
 __attribute__ ((format (printf, 3, 4)))
@@ -76,8 +76,8 @@ __attribute__ ((format (printf, 3, 4)))
 
 /*NORETURN inline void die(TResult result, bool sendDie, const char* fmt, ...) { // die para comunicacion
 	if (sendDie) {
-	  fprintf(grader2out, "-1\n");
-	  fflush(grader2out);
+		fprintf(grader2out, "-1\n");
+		fflush(grader2out);
 	}
 	FMT_TO_RESULT(fmt, fmt, message);
 	quit(result, message);
@@ -96,25 +96,25 @@ inline void assertInput(bool cond, string message = "No se pudo leer el Input.")
 /********************************* NO TOCAR, TEMPLATE DE MANEJO DE ARCHIVOS *********************************/
 
 int main (int argc, char **argv) {
-    if (argc < 3) { // 5 para comunicacion, 3 para interactivos
+	if (argc < 3) { // 5 para comunicacion, 3 para interactivos
 		quit(_fail, "Insuficiente #args para el manager.");
 	}
 
-    {//Mantener en broken pipes
+	{ // mantener en broken pipes
 		//signal(SIGPIPE, SIG_IGN);
 		struct sigaction sa;
 		sa.sa_handler = SIG_IGN;
 		sigaction(SIGPIPE, &sa, NULL);
 	}
 
-    grader1out = openFile(argv[2], "a"); // primera llamada
+	grader1out = openFile(argv[2], "a"); // primera llamada
 	grader1in = openFile(argv[1], "r");
 	//grader2out = openFile(argv[4], "a"); // segunda llamada
 	//grader2in = openFile(argv[3], "r");
 
-    //********************** TEMPLATE **********************//
+	//********************** TEMPLATE **********************//
 
-    // TU MANAGER VA AQUI
+	// TU MANAGER VA AQUI
 
-    return 0;
+	return 0;
 }
