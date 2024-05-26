@@ -93,7 +93,7 @@ inline void assertInput(bool cond, string message = "No se pudo leer el Input.")
 
 int main (int argc, char **argv) {
 
-    /********************** TEMPLATE **********************/
+    /********************** TEMPLATE *********************/
 
     if (argc < 3) { // 5 para comunicacion, 3 para interactivos
 		quit(_fail, "Insuficiente #args para el manager.");
@@ -111,10 +111,9 @@ int main (int argc, char **argv) {
 	//grader2out = openFile(argv[4], "a"); // segunda llamada
 	//grader2in = openFile(argv[3], "r");
 
-    /********************** TEMPLATE **********************/
+    /********************** TEMPLATE *********************/
 
     // TU MANAGER VA AQUI
 
     return 0;
 }
-
