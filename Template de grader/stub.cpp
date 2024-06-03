@@ -31,15 +31,9 @@ int main(int argc, char **argv) {
 
     /********************** TEMPLATE **********************/
 
-	/*if (argc != 4) { // para problemas de comunicacion
+	if (argc != 4) {
 		fprintf(stderr, "Error del evaluador.\n");
 		fprintf(stderr, "El numero de argumentos no es 4\n");
-		exit(0);
-	}*/
-
-	if (argc != 2) { // para problemas interactivos
-		fprintf(stderr, "Error del evaluador.\n");
-		fprintf(stderr, "El numero de argumentos no es 2\n");
 		exit(0);
 	}
 
@@ -49,13 +43,11 @@ int main(int argc, char **argv) {
     /********************** TEMPLATE **********************/
 
 	if (string(argv[3]) == "0") { // primera llamada, unica llamada para interactivos
-
-
+		return 0;
 	}
-    /*else if (string(argv[3]) == "1") { // segunda llamada, para problemas de comunicacion
-
-
-	}*/
+    else if (string(argv[3]) == "1") { // segunda llamada
+		return 0;
+	}
 	else {
 		fprintf(stderr, "Error del evaluador.\n");
 		fprintf(stderr, "Evaluador desconocido del tipo %s\n", argv[3]);
